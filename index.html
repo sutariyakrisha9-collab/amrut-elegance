@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amrut Jewellery</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Font Awesome for Search Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+  <style>
+    body {
+      background-color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #f8f8f8;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: #b48c72 !important;
+    }
+
+    .navbar-nav .nav-link {
+      color: #333;
+      font-weight: 500;
+      margin-right: 20px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #b48c72;
+    }
+
+    .hero-section img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .product-card {
+      border: none;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .product-card .card-body h5 {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .product-card .card-text {
+      color: #b48c72;
+      font-weight: bold;
+    }
+
+    .add-to-cart-btn {
+      background-color: #000;
+      color: #fff;
+      border: none;
+    }
+
+    .add-to-cart-btn:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .category-chip {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #f1f1f1;
+      border-radius: 50px;
+      margin: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .category-chip:hover {
+      background-color: #b48c72;
+      color: #fff;
+    }
+
+    .category-menu {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .category-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .category-btn img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid #b48c72;
+      padding: 5px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      background-color: #fff;
+    }
+
+    .category-btn:hover img {
+      transform: scale(1.1);
+      border-color: #8c674f;
+    }
+
+    .category-btn span {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    .navbar-nav .nav-link {
+      padding: 0;
+      margin: 0;
+    }
+
+    .logo-img {
+      height: 100px;
+      width: auto;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar with Logo and Search -->
+  <nav class="navbar shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#">
+        <img src="D:\Krisha\AWEB\Logo.jpg" alt="Amrut Logo" class="logo-img" style="height:50px;">
+      </a>
+
+      <div class="search-bar d-flex align-items-center">
+        <input type="text" class="form-control" placeholder="Search for Gold Jewellery, Diamond Jewellery..."/>
+        <i class="fas fa-search search-icon ms-2"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Circular Category Buttons -->
+  <div class="category-menu">
+    <a href="gold.html" class="category-btn">
+      <img src="D:\Krisha\AWEB\gold.jpg" alt="Gold"/>
+      <span>Gold</span>
+    </a>
+    <a href="diamond.html" class="category-btn">
+      <img src="D:\Krisha\AWEB\Diamond.jpg" alt="Diamond"/>
+      <span>Diamond</span>
+    </a>
+    <a href="earrings.html" class="category-btn">
+      <img src="D:\Krisha\AWEB\Earrings1.webp" alt="Earrings"/>
+      <span>Earrings</span>
+    </a>
+    <a href="rings.html" class="category-btn">
+      <img src="D:\Krisha\AWEB\ring1.webp" alt="Rings"/>
+      <span>Rings</span>
+    </a>
+    <a href="wedding.html" class="category-btn">
+      <img src="D:\Krisha\AWEB\weddings.jpeg" alt="Wedding"/>
+      <span>Wedding</span>
+    </a>
+    <a href="gifting.html" class="category-btn">
+      <img src="D:\Krisha\AWEB\gifting.jpg" alt="Gifting"/>
+      <span>Gifting</span>
+    </a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section container mt-4">
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="D:\Krisha\AWEB\Jewellery Banner1.jpg" class="d-block w-100" alt="Jewellery Banner 1"/>
+        </div>
+        <div class="carousel-item">
+          <img src="D:\Krisha\AWEB\Jewellery Banner2.jpg" class="d-block w-100" alt="Jewellery Banner 2"/>
+        </div>
+        <div class="carousel-item">
+          <img src="D:\Krisha\AWEB\Jewellery Banner3.webp" class="d-block w-100" alt="Jewellery Banner 3"/>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Product Section -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Featured Jewellery</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="D:\Krisha\AWEB\Earrings2.webp" alt="Earring 1" class="product-image"/>
+          <div class="card-body">
+            <h5>Dazzling Grace Drop Earrings</h5>
+            <p class="card-text">₹ 62,570</p>
+            <button class="btn add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="D:\Krisha\AWEB\Earrings3.jpg" alt="Earring 2" class="product-image"/>
+          <div class="card-body">
+            <h5>Captivating Charm Earrings</h5>
+            <p class="card-text">₹ 40,037</p>
+            <button class="btn add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="D:\Krisha\AWEB\RING.webp" alt="Ring 1" class="product-image"/>
+          <div class="card-body">
+            <h5>Royal Diamond Ring</h5>
+            <p class="card-text">₹ 77,347</p>
+            <button class="btn add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Amrut Jewellery. All rights reserved.</p>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    $(document).ready(function() {
+      // Alert when image is clicked
+      $('.product-image').click(function() {
+        const title = $(this).closest('.product-card').find('h5').text();
+        alert('You clicked on image of: ' + title);
+      });
+
+      // Alert when Add to Cart button is clicked
+      $('.add-to-cart-btn').click(function(e) {
+        e.stopPropagation(); // Prevent triggering image click
+        const title = $(this).closest('.product-card').find('h5').text();
+        alert('Added to cart: ' + title);
+      });
+    });
+  </script>
+</body>
+
+</html>
